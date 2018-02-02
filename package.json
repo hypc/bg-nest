@@ -1,0 +1,26 @@
+{
+  "name": "bg-nest",
+  "version": "0.0.1",
+  "description": "nest for background",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hypc",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hypc/bg-nest.git"
+  },
+  "keywords": [
+    "nest"
+  ],
+  "bugs": {
+    "url": "https://github.com/hypc/bg-nest/issues"
+  },
+  "homepage": "https://github.com/hypc/bg-nest#readme"
+}
