@@ -1,6 +1,6 @@
 {
   "name": "bg-nest",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "nest for background",
   "main": "index.js",
   "scripts": {

@@ -1,10 +1,10 @@
 var BgNest = function(options){
     options = options || {};
     this.options = {
-        zindex: options['zindex'] || 'auto',
+        zindex: options['zindex'] || '-1',
         opacity: options['opacity'] || 0.5,
-        color: options['color'] || '#000',
-        count: options['count'] || 99
+        color: options['color'] || '0,0,0',
+        count: options['count'] || 150
     };
     this.init();
 };
@@ -25,7 +25,7 @@ BgNest.prototype = {
         canvas.style.cssText = 'position:fixed;top:0;left:0;z-index:' + config.zindex + ';opacity:' + config.opacity;
         self.set_canvas_size();
         window.onresize = function(){ self.set_canvas_size(); };
-        document.getElementsByTagName('body')[0].appendChild(canvas);
+        document.body.appendChild(canvas);
 
         // mouse point
         var mouse_point = { x: null, y: null, r: 20000 };
@@ -86,7 +86,7 @@ BgNest.prototype = {
                         var d = (e.r - dist) / e.r;
                         context.beginPath();
                         context.lineWidth = d / 2;
-                        context.strokeStyle = self.options.color;
+                        context.strokeStyle = 'rgb(' + self.options.color + ',' + (d + 0.2) + ')';
                         context.moveTo(point.x, point.y);
                         context.lineTo(e.x, e.y);
                         context.stroke();
